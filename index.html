@@ -17,7 +17,53 @@
         <div id="current-time"></div> <!-- 用于显示当前时间 -->
     </footer>
 
+    <!-- 下面是新增的身份记录部分 -->
+    <div class="container">
+        <h2>身份记录</h2>
+        
+        <div class="form-group">
+            <label for="message">你想对我说什么？</label>
+            <input type="text" id="message" placeholder="吃好喝好早睡觉">
+        </div>
+
+        <div class="form-group">
+            <label for="name">署名</label>
+            <input type="text" id="name" placeholder="LiHua">
+        </div>
+
+        <button onclick="submitMessage()">提交</button>
+
+        <div id="output" class="output">
+            <!-- 提交的留言内容会显示在这里 -->
+        </div>
+    </div>
+
     <!-- 引入 script.js -->
     <script src="script.js"></script>
+
+    <!-- 下面是新增的JavaScript部分 -->
+    <script>
+        function submitMessage() {
+            const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value;
+
+            // 检查是否填写完整
+            if (message && name) {
+                const outputDiv = document.getElementById('output');
+                
+                // 动态显示提交的内容
+                outputDiv.innerHTML = `<h3>留言记录</h3><p><strong>你说：</strong>${message}</p><p><strong>署名：</strong>${name}</p>`;
+                
+                // 清空输入框内容
+                document.getElementById('message').value = '';
+                document.getElementById('name').value = '';
+                
+                // 滚动到留言区域
+                outputDiv.scrollIntoView({ behavior: "smooth" });
+            } else {
+                alert('请确保两项都填写完整！');
+            }
+        }
+    </script>
 </body>
 </html>

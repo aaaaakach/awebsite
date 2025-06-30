@@ -1,3 +1,4 @@
+/* 基本布局 */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,16 +7,67 @@ body {
     padding: 0;
 }
 
+/* Header样式 */
 header {
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
 }
 
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* About section */
+#about {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#about img {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+/* Projects section */
+#projects {
+    background-color: #eeeeee;
+    padding: 20px;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#projects ul li {
+    margin: 10px 0;
+}
+
+/* Contact section */
+#contact {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Footer样式 */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #333;
     color: white;
 }

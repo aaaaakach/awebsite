@@ -7,6 +7,17 @@ body {
     padding: 0;
 }
 
+/* Container 样式 */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 /* Header样式 */
 header {
     background-color: #4CAF50;
@@ -30,69 +41,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
-/* About section */
-#about {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-#about img {
-    max-width: 200px;
-    border-radius: 50%;
-}
-
-/* Projects section */
-#projects {
-    background-color: #eeeeee;
-    padding: 20px;
-}
-
-#projects ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#projects ul li {
-    margin: 10px 0;
-}
-
-/* Contact section */
-#contact {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px 0;
-}
-
-/* Footer样式 */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 80%;
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
+/* 其他样式 */
 .form-group {
     margin-bottom: 20px;
 }
@@ -138,4 +87,26 @@ button:hover {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 4px;
+}
+
+/* 主界面样式 */
+#main-section {
+    background-color: #4CAF50;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 底部样式 */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }

@@ -7,18 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>欢迎来到我的个人网站</h1>
-        <p>这是我在GitHub Pages上发布的个人网站。</p>
-    </header>
-
-    <footer>
-        <p>&copy; 2025 我的个人网站</p>
-        <div id="current-time"></div> <!-- 用于显示当前时间 -->
-    </footer>
-
-    <!-- 下面是新增的身份记录部分 -->
-    <div class="container">
+    <!-- 留言输入界面 -->
+    <div id="message-section" class="container">
         <h2>身份记录</h2>
         
         <div class="form-group">
@@ -38,32 +28,17 @@
         </div>
     </div>
 
+    <!-- 主界面部分 (初始时隐藏) -->
+    <div id="main-section" style="display: none; text-align: center; padding: 50px; background-color: #4CAF50; color: white;">
+        <h1>WELCOME TO AKACH'S WEBSITE</h1>
+    </div>
+
+    <!-- 底部时间显示 -->
+    <footer>
+        <p id="current-time"></p> <!-- 用于显示当前时间 -->
+    </footer>
+
     <!-- 引入 script.js -->
     <script src="script.js"></script>
-
-    <!-- 下面是新增的JavaScript部分 -->
-    <script>
-        function submitMessage() {
-            const message = document.getElementById('message').value;
-            const name = document.getElementById('name').value;
-
-            // 检查是否填写完整
-            if (message && name) {
-                const outputDiv = document.getElementById('output');
-                
-                // 动态显示提交的内容
-                outputDiv.innerHTML = `<h3>留言记录</h3><p><strong>你说：</strong>${message}</p><p><strong>署名：</strong>${name}</p>`;
-                
-                // 清空输入框内容
-                document.getElementById('message').value = '';
-                document.getElementById('name').value = '';
-                
-                // 滚动到留言区域
-                outputDiv.scrollIntoView({ behavior: "smooth" });
-            } else {
-                alert('请确保两项都填写完整！');
-            }
-        }
-    </script>
 </body>
 </html>

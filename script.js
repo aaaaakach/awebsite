@@ -19,8 +19,11 @@ function submitMessage() {
     const message = document.getElementById('message').value;
     const name = document.getElementById('name').value;
 
+    // 检查是否填写完整
     if (message && name) {
         const outputDiv = document.getElementById('output');
+        
+        // 动态显示提交的内容
         outputDiv.innerHTML = `<h3>留言记录</h3><p><strong>你说：</strong>${message}</p><p><strong>署名：</strong>${name}</p>`;
         
         // 清空输入框内容
@@ -29,6 +32,10 @@ function submitMessage() {
         
         // 滚动到留言区域
         outputDiv.scrollIntoView({ behavior: "smooth" });
+
+        // 隐藏留言部分，显示主界面
+        document.getElementById('message-section').style.display = 'none';
+        document.getElementById('main-section').style.display = 'flex';
     } else {
         alert('请确保两项都填写完整！');
     }
